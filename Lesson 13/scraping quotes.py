@@ -14,7 +14,7 @@ soup = BeautifulSoup(response)
 quotes_url = 'http://quotes.yourdictionary.com/theme/marriage/'
 quotes_html = urlopen(quotes_url).read()
 quotes_soup = BeautifulSoup(quotes_html)
-quotes = quotes_soup.findAll("p", attrs={"class": "quoteContent"})
+quotes = quotes_soup.findAll("p", attrs={"class": "quoteContent"})[:5]
 for x in quotes:
     print x.text
     csv_file.write(x.text + "\n")
