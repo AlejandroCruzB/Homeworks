@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+vehiculos_file = open("vehiculos.txt", "w+")
 class Vehiculo:
     def __init__(self, marca, modelo, km, date):
         self.marca = marca
@@ -58,10 +58,7 @@ def edit_vehiculo(vehiculos):
     print ""  # empty line
     print "Updated."
 
-def save_to_disk(vehiculos):
-    with open("vehiculos.txt", "w+") as vehiculos_file:
-        for vehiculo in vehiculos:
-            vehiculo_file.write("%s,%s,%s,%s\n" % (vehiculo.marca, vehiculo.modelo, vehiculo.km, vehiculo.date))
+
 
 
 
@@ -77,13 +74,7 @@ def main():
     Coche_C = Vehiculo(marca="Audi", modelo="A5", km="109.429 km", date="2008")
     vehiculos = [Coche_A, Coche_B, Coche_C]
 
-    with open("vehiculos.txt", "r") as vehiculos_file:
-        for line in vehiculos_file:
-            try:
-                marca, modelo, km_str, date = line.split(",")
-                add_new_vehiculo(marca, modelo, km_str, date, vehiculos)
-            except ValueError:
-                continue
+
 
     while True:
         print ""  # empty line
@@ -105,11 +96,15 @@ def main():
             edit_vehiculo(vehiculos)
         elif selection.lower() == "d":
             print "Thank you for using List. Goodbye!"
-            save_to_disk(vehiculos)
+            vehiculos_file.write("Lista: \n")
+            for k in list_all_vehiculos(vehiculos):
+                vehiculos_file.write("list_all_vehiculos(vehiculos) /n")
             break
         else:
             print "Sorry, I didn't understand your selection. Please try again."
             continue
+
+vehiculos_file.close()
 
 if __name__ == "__main__":
     main()
