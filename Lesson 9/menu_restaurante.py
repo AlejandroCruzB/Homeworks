@@ -19,9 +19,9 @@ while True:
 
 print "Menú del día: %s" % menu
 menu_del_dia_file.write("Menú del día: \n")
-for x in menu:
-    print "- " + x
-    menu_del_dia_file.write("- " + x + "\n")
+for k,v in menu.items():
+    print "- " + k + " = " + str(v["Precio"]) + "€"
+    menu_del_dia_file.write(k + " = " + str(v["Precio"]) + " €" "\n")
 print "Gracias por usar el programa"
 
 menu_del_dia_file.close()
