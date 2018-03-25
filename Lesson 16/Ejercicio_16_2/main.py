@@ -2,8 +2,7 @@
 import os
 import jinja2
 import webapp2
-from datetime import date, datetime
-hoy = datetime.now().strftime
+
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -30,30 +29,29 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        date = datetime.now().strftime
-        params = {"hoy": date("%d-%m-%Y " + "y son las " + "%H:%M:%S")}
-        return self.render_template("hello.html", params=params)
-
-class About_meHandler(BaseHandler):
-    def get(self):
-        return self.render_template("about_me.html")
+        return self.render_template("index.html")
 
 class BlogHandler(BaseHandler):
     def get(self):
         return self.render_template("blog.html")
 
-class ContactHandler(BaseHandler):
-    def get(self):
-        return self.render_template("contact.html")
-
 class ProjectsHandler(BaseHandler):
     def get(self):
         return self.render_template("projects.html")
 
+class ContactHandler(BaseHandler):
+    def get(self):
+        return self.render_template("contact.html")
+
+class About_meHandler(BaseHandler):
+    def get(self):
+        return self.render_template("about_me.html")
+
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
-    webapp2.Route('/about_me', About_meHandler),
     webapp2.Route('/blog', BlogHandler),
-    webapp2.Route('/contact', ContactHandler),
     webapp2.Route('/projects', ProjectsHandler),
+    webapp2.Route('/contact', ContactHandler),
+    webapp2.Route('/about_me', About_meHandler),
 ], debug=True)
