@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Resume HTML Bootstrap Template</title>
+
+  <!-- Bootstrap -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/font-awesome.css">
+  <link rel="stylesheet" href="../assets/css/animate.css">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <div class="wrapper" id="wrapper">
+    <header>
+      
+  {% extends "menu.html" %}
+
+</header>
+
+
+  {% block content %}
+
+  {% endblock %}
+
+
+    <!--footer-->
+    <section class="footer" id="footer">
+      <p class="text-center">
+        <a href="#wrapper" class="gototop"><i class="fa fa-angle-double-up fa-2x"></i></a>
+      </p>
+      <div class="container">
+        <ul>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; Alejandro Cruz Theme. All Rights Reserved.</p>
+
+      </div>
+    </section>
+
+  </div>
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/modernizr.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/menustick.js"></script>
+  <script src="../assets/js/parallax.js"></script>
+  <script src="../assets/js/easing.js"></script>
+  <script src="../assets/js/wow.js"></script>
+  <script src="../assets/js/smoothscroll.js"></script>
+  <script src="../assets/js/masonry.js"></script>
+  <script src="../assets/js/imgloaded.js"></script>
+  <script src="../assets/js/classie.js"></script>
+  <script src="../assets/js/colorfinder.js"></script>
+  <script src="../assets/js/gridscroll.js"></script>
+  <script src="../assets/js/contact.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <script>
+    wow = new WOW({}).init();
+  </script>
+  <script type="text/javascript">
+    jQuery(function($) {
+      $(document).ready(function() {
+        //enabling stickUp on the '.navbar-wrapper' class
+        $('.navbar-wrapper').stickUp({
+          parts: {
+            0: 'banner',
+            1: 'aboutus',
+            2: 'specialties',
+            3: 'gallery',
+            4: 'feedback',
+            5: 'contact'
+          },
+          itemClass: 'menuItem',
+          itemHover: 'active',
+          topMargin: 'auto'
+        });
+      });
+
+
+
+
+</body>
+
+</html>
