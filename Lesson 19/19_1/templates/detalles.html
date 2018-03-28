@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>A single message</title>
+    </head>
+
+    <body>
+            <h1>Message info</h1>
+
+            <p>ID: {{ message.key.id() }}</p>
+            <p>Fecha: {{ message.created }}</p>
+            <p>Nombre: {{ message.nombre }}</p>
+            <p>Email: {{ message.email }}</p>
+            <p>Mensaje: {{ message.message }}</p>
+    </body>
+</html>
