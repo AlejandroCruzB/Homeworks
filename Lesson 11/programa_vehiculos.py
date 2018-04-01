@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-vehiculos_file = open("vehiculos.txt", "w+")
+
 class Vehiculo:
     def __init__(self, marca, modelo, km, date):
         self.marca = marca
@@ -11,6 +11,13 @@ class Vehiculo:
 
     def get_full_name(self):
         return self.marca + " " + self.modelo
+
+    #def get_csv_head(self):
+        #return "marca, modelo"
+
+    #def get_csv_data(self):  >> Para CSV habría que modificar luego abajo
+        #return "%s, %s" % (self.marca, self.modelo)
+
 
 
 def list_all_vehiculos(vehiculos):
@@ -65,7 +72,6 @@ def edit_vehiculo(vehiculos):
 def main():
 
 
-
     print "Welcome to your List"
 
 
@@ -96,15 +102,18 @@ def main():
             edit_vehiculo(vehiculos)
         elif selection.lower() == "d":
             print "Thank you for using List. Goodbye!"
-            vehiculos_file.write("Lista: \n")
-            for k in list_all_vehiculos(vehiculos):
-                vehiculos_file.write("list_all_vehiculos(vehiculos) /n")
+            vehiculos_file = open("vehiculos.txt", "w+")
+            vehiculos_file.write("Lista: \n") #> si se guarda en csv no tiene sentido por el formato de donde se guarda
+            vehiculos_file.write("marca, modelo, \n")
+            for k in vehiculos:
+                vehiculos_file.write("%s, %s \n" % (k.marca, k.modelo))
+            vehiculos_file.close()
             break
         else:
             print "Sorry, I didn't understand your selection. Please try again."
             continue
 
-vehiculos_file.close()
+
 
 if __name__ == "__main__":
     main()
