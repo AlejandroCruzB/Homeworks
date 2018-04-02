@@ -44,6 +44,8 @@ class DatosHandler(BaseHandler):
             nombre = "Anonimo"
         email = self.request.get("email")
         message = self.request.get("message")
+        if "<script>" in message:
+            return self.write("No Hack")
 
         msg = Message(nombre=nombre, email=email, message=message)
         msg.put()
