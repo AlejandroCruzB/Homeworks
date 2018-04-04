@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Hello, SmartNinja!</h1>
+    <p><strong>Inserte la tarea</strong></p>
+
+    <form method="post" action="/datos">
+
+    <p><strong>Nombre de la tarea: </strong><input type="text" name="message"></p>
+
+    <p><strong>¿Se ha realizado? Indique si o no: </strong><input type="text" name="email"></p>
+
+    <p><textarea name="nombre" rows="10" cols="80" placeholder="Describa su tarea" required></textarea></p>
+
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>

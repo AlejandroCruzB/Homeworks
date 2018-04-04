@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Hello, SmartNinja!</h1>
+    <p><strong>Ingrese su película al listado:</strong></p>
+
+    <form method="post" action="/datos">
+
+    <p><strong>Escriba el titulo de la pelicula: </strong><input type="text" name="titulo"></p>
+
+    <p><strong>Ponga una valoracion del 1 al 5: </strong><input type="number" name="valoracion"></p>
+
+    <p><textarea name="imagen" rows="10" cols="80" placeholder="Inserte la url de la imagen" required></textarea></p>
+
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>

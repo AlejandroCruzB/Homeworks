@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
+            <h1>Mensajes escritos</h1>
+
+            {% for message in messages %}
+
+              <p><a href="/message/{{ message.key.id() }}">{{ message.message }}</a></p>
+
+            {% endfor %}
+    </body>
+</html>
+
+{% endblock %}

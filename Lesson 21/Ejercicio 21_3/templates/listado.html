@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Message list</title>
+    </head>
+
+    <body>
+            <h1>Listado de todas las peliculas</h1>
+
+            {% for titulo in titulo %}
+
+              <p><a href="/titulo/{{ titulo.key.id() }}">{{ titulo.titulo }}</a></p>
+
+            {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Message list</title>
+    </head>
+
+    <body>
+            <h1>Todas las tareas</h1>
+
+            {% for message in messages %}
+
+              <p><a href="/message/{{ message.key.id() }}">{{ message.message }}</a></p>
+
+            {% endfor %}
+    </body>
+</html>

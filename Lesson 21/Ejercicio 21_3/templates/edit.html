@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Message list</title>
+    </head>
+
+    <body>
+    <form action="/titulo/{{ titulo.key.id() }}/edit" method="post">
+        <input name="titulo" value="{{ titulo.titulo }}">
+        <input name="valoracion" value=" {{ titulo.valoracion }}">
+        <input name="imagen" value="{{ titulo.imagen }}">
+        <button type="submit">Editar</button>
+    </form>
+</body>
+</html>

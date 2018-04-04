@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>A single message</title>
+    </head>
+
+    <body>
+            <h1>Detalles de la pelicula: </h1>
+
+            <p>ID: {{ titulo.key.id() }}</p>
+            <p>Fecha de listado: {{ titulo.created }}</p>
+            <p>Titulo: {{ titulo.titulo }}</p>
+            <p>Valoracion: {{ titulo.valoracion }}</p>
+            <p>Imagen: {{ titulo.imagen }}</p>
+
+            <p><a href="/titulo/{{ titulo.key.id() }}/edit"> Editar pelicula </a></p>
+            <p><a href="/titulo/{{ titulo.key.id() }}/delete"> Eliminar pelicula </a></p>
+    </body>
+</html>
