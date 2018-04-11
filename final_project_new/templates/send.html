@@ -1,0 +1,24 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+  <h1>Hello, {{ user.nickname()}}!</h1>
+
+  <p><strong>Escribe tu email</strong></p>
+
+  <form method="post">
+
+  <p><strong>Destinatario: </strong><input type="email" name="destinatario" required></p>
+
+  <p><strong>Asunto: </strong><input type="text" name="asunto" required></p>
+
+  <p><textarea name="message" rows="10" cols="80" placeholder="Escriba su mensaje" required></textarea></p>
+
+  <button type="submit">Enviar</button>
+
+  </form>
+
+  <p><a href="/inbox">Bandeja de entrada</a></p>
+  <p><a href="/sendbox">Emails enviados</a></p>
+  <p><a href={{logout_url}}>Log out</a></p>
+
+{% endblock content %}

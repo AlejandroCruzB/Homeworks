@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Weather</title>
+    </head>
+
+    <body>
+            <h2>Weather in location {{ weather_info.name }}</h2>
+            <p>Descripcion: {{ weather_info.weather[0].description }}</p>
+            <p>Temperatura: {{ weather_info.main.temp }} grados</p>
+
+            <div>
+              <a href="/">volver</a>
+            </div>
+    </body>
+</html>

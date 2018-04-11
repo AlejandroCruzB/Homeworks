@@ -1,0 +1,16 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+  <h1>Detalles del email</h1>
+
+  <p>Email ID: {{ email.key.id() }}</p>
+  <p>Remitente: {{ email.remitente }}</p>
+  <p>Destinatario: {{ email.destinatario }}</p>
+  <p>Mensaje: {{ email.message }}</p>
+  <p>Fecha: {{ email.created }}</p>
+
+  <p><a href="/inbox">Bandeja de entrada</a></p>
+  <p><a href="/sendbox">Emails enviados</a></p>
+  <p><a href={{logout_url}}>Log out</a></p>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "plantilla.html" %}
+
+{% block content %}
+
+
+    <h1>Hello, {{ user.nickname()}}!</h1>
+
+    <p>Mensajes {{ inbox }} <p>
+
+    {% for y in emails %}
+      <h5>
+        {% if inbox == "inbox" %}
+          {{ y.remitente }}
+        {% else %}
+          {{ y.destinatario}}
+
+        {% endif %}
+        {{ y.asunto }}
+          <a href="/emails/{{ y.key.id() }}">{{ y.message }}</a>
+      </h5>
+    {% endfor %}
+
+  <p><a href="/send">Enviar email</a></p>
+  <p><a href="/inbox">Emails recibidos</a></p>
+  <p><a href="/sendbox">Emails enviados</a></p>
+  <p><a href={{logout_url}}>Log out</a></p>
+
+{% endblock content %}

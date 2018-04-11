@@ -1,0 +1,45 @@
+body {
+  font-family: "Verdana", "Arial", "Helvetica";
+}
+
+nav {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#titulo {
+  color: #424242;
+  font-size: 36px;
+  font-weight: 450;
+  display: block;
+  width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.log {
+  width: 450px;
+  margin: auto;
+  text-align: center;
+  color: #424242;
+  font-size: 8px;
+  font-weight: 50;
+  display: block;
+}
+
+main {
+  width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 330px;
+    padding: 15px;
+    position: relative;
+    font-size: 16px;
+    }
+input {
+    width: 275px;
+    margin-bottom: 13px;
+    border-radius: 7px;
+  }
